@@ -3,19 +3,19 @@
 <p align="center"><em>GitHub CLI–style workflows for Jenkins controllers</em></p>
 
 <p align="center">
-  <a href="https://github.com/avivsinai/jenkins-cli/releases/latest"><img src="https://img.shields.io/github/v/release/avivsinai/jenkins-cli" alt="Latest release"></a>
+  <a href="https://github.com/avril-k-belisle-usps/jenkins-cli/releases/latest"><img src="https://img.shields.io/github/v/release/avril-k-belisle-usps/jenkins-cli" alt="Latest release"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
   <a href="go.mod"><img src="https://img.shields.io/badge/Go-1.25+-00ADD8.svg" alt="Go Version"></a>
-  <a href="https://github.com/avivsinai/jenkins-cli/actions/workflows/ci.yml"><img src="https://github.com/avivsinai/jenkins-cli/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
-  <a href="https://github.com/avivsinai/jenkins-cli/actions/workflows/gitleaks.yml"><img src="https://github.com/avivsinai/jenkins-cli/actions/workflows/gitleaks.yml/badge.svg" alt="Security"></a>
-  <a href="https://scorecard.dev/viewer/?uri=github.com/avivsinai/jenkins-cli"><img src="https://api.scorecard.dev/projects/github.com/avivsinai/jenkins-cli/badge" alt="OpenSSF Scorecard"></a>
+  <a href="https://github.com/avril-k-belisle-usps/jenkins-cli/actions/workflows/ci.yml"><img src="https://github.com/avril-k-belisle-usps/jenkins-cli/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://github.com/avril-k-belisle-usps/jenkins-cli/actions/workflows/gitleaks.yml"><img src="https://github.com/avril-k-belisle-usps/jenkins-cli/actions/workflows/gitleaks.yml/badge.svg" alt="Security"></a>
+  <a href="https://scorecard.dev/viewer/?uri=github.com/avril-k-belisle-usps/jenkins-cli"><img src="https://api.scorecard.dev/projects/github.com/avril-k-belisle-usps/jenkins-cli/badge" alt="OpenSSF Scorecard"></a>
 </p>
 
 `jk` is a single Go binary for Jenkins operators. Search jobs across folders, trigger and follow runs, stream logs, download artifacts, and manage credentials, nodes, queues, and plugins. Output is human, JSON, or YAML.
 
 This is not the official Jenkins CLI (`jenkins-cli.jar`; [jenkins.io](https://www.jenkins.io/doc/book/managing/cli/)).
 
-**Status ([v0.0.36](https://github.com/avivsinai/jenkins-cli/releases/tag/v0.0.36), 11 Aug 2026):** released and tested against stock Jenkins LTS REST APIs. Auth, contexts, search, jobs, runs, logs, artifacts, tests, credentials, nodes, queue, and plugins ship today. Companion plugin, JCasC, events, and metrics are not in this binary. The version stays 0.x for that reason.
+**Status ([v0.0.36](https://github.com/avril-k-belisle-usps/jenkins-cli/releases/tag/v0.0.36), 11 Aug 2026):** released and tested against stock Jenkins LTS REST APIs. Auth, contexts, search, jobs, runs, logs, artifacts, tests, credentials, nodes, queue, and plugins ship today. Companion plugin, JCasC, events, and metrics are not in this binary. The version stays 0.x for that reason.
 
 ## Features
 
@@ -30,18 +30,18 @@ This is not the official Jenkins CLI (`jenkins-cli.jar`; [jenkins.io](https://ww
 
 ## Installation
 
-Install the `jk` binary from the paths below. Homebrew uses [`avivsinai/tap`](https://github.com/avivsinai/homebrew-tap) (`jk`); Scoop uses [`avivsinai/scoop-bucket`](https://github.com/avivsinai/scoop-bucket). There is no Nix package and no PyPI project for this CLI.
+Install the `jk` binary from the paths below. Homebrew uses [`avril-k-belisle-usps/tap`](https://github.com/avril-k-belisle-usps/homebrew-tap) (`jk`); Scoop uses [`avril-k-belisle-usps/scoop-bucket`](https://github.com/avril-k-belisle-usps/scoop-bucket). There is no Nix package and no PyPI project for this CLI.
 
 ### Homebrew (macOS/Linux)
 
 ```bash
-brew install avivsinai/tap/jk
+brew install avril-k-belisle-usps/tap/jk
 ```
 
 ### Scoop (Windows)
 
 ```powershell
-scoop bucket add avivsinai https://github.com/avivsinai/scoop-bucket
+scoop bucket add avril-k-belisle-usps https://github.com/avril-k-belisle-usps/scoop-bucket
 scoop install jk
 ```
 
@@ -49,22 +49,22 @@ scoop install jk
 
 ```bash
 # Install latest version
-go install github.com/avivsinai/jenkins-cli/cmd/jk@latest
+go install github.com/avril-k-belisle-usps/jenkins-cli/cmd/jk@latest
 
 # Or install specific version
-go install github.com/avivsinai/jenkins-cli/cmd/jk@v0.0.36
+go install github.com/avril-k-belisle-usps/jenkins-cli/cmd/jk@v0.0.36
 ```
 
 Binary will be installed to `$GOPATH/bin` (or `$HOME/go/bin` by default).
 
 ### Binary Downloads
 
-Download prebuilt binaries (macOS, Linux, Windows) or `.deb` packages from [GitHub Releases](https://github.com/avivsinai/jenkins-cli/releases).
+Download prebuilt binaries (macOS, Linux, Windows) or `.deb` packages from [GitHub Releases](https://github.com/avril-k-belisle-usps/jenkins-cli/releases).
 
 ### From Source
 
 ```bash
-git clone https://github.com/avivsinai/jenkins-cli.git
+git clone https://github.com/avril-k-belisle-usps/jenkins-cli.git
 cd jenkins-cli
 make build   # produces ./bin/jk
 ```
@@ -79,7 +79,7 @@ Install the `jk` skill for Claude Code or Codex CLI:
 Using [Vercel's skills CLI](https://github.com/vercel-labs/add-skill):
 
 ```bash
-npx skills add avivsinai/jenkins-cli -g -y
+npx skills add avril-k-belisle-usps/jenkins-cli -g -y
 ```
 
 </details>
@@ -88,7 +88,7 @@ npx skills add avivsinai/jenkins-cli -g -y
 <summary><b>Via skild registry</b></summary>
 
 ```bash
-npx skild install @avivsinai/jk -t claude -y
+npx skild install @avril-k-belisle-usps/jk -t claude -y
 ```
 
 </details>
@@ -99,8 +99,8 @@ npx skild install @avivsinai/jk -t claude -y
 > **Known Issue**: Claude Code uses SSH to clone marketplace repos, which fails without SSH keys configured. See [issue #14485](https://github.com/anthropics/claude-code/issues/14485). Use the skills or skild methods instead.
 
 ```bash
-/plugin marketplace add avivsinai/skills-marketplace
-/plugin install jk@avivsinai-marketplace
+/plugin marketplace add avril-k-belisle-usps/skills-marketplace
+/plugin install jk@avril-k-belisle-usps-marketplace
 ```
 
 </details>
@@ -109,7 +109,7 @@ npx skild install @avivsinai/jk -t claude -y
 <summary><b>Manual install</b></summary>
 
 ```bash
-git clone https://github.com/avivsinai/jenkins-cli.git
+git clone https://github.com/avril-k-belisle-usps/jenkins-cli.git
 cp -r jenkins-cli/skills/jk ~/.claude/skills/
 ```
 
@@ -154,7 +154,7 @@ This works because Jenkins validates API tokens before consulting the security r
 - If the request is redirected to a sign-in page (Jenkins form login, `securityRealm/commenceLogin`, or an external identity provider), `jk` reports that the request never authenticated instead of failing on an HTML response. The same detection applies to every `jk` command, so an expired token against an SSO-fronted controller produces an actionable error.
 - If the controller cannot be reached, the credentials are saved unverified with a warning. Use `--no-verify` to skip the check entirely (for example when bootstrapping configuration before the controller is up).
 
-Service accounts cannot authenticate through a browser-based SSO realm like `google-login` — they never become Jenkins users, so they cannot hold API tokens. That setup requires a bearer-validating front door (Google IAP, a JWT filter, or similar) in front of Jenkins; support for bearer/front-door authentication is tracked in [issue #129](https://github.com/avivsinai/jenkins-cli/issues/129).
+Service accounts cannot authenticate through a browser-based SSO realm like `google-login` — they never become Jenkins users, so they cannot hold API tokens. That setup requires a bearer-validating front door (Google IAP, a JWT filter, or similar) in front of Jenkins; support for bearer/front-door authentication is tracked in [issue #129](https://github.com/avril-k-belisle-usps/jenkins-cli/issues/129).
 
 ### Secret Storage
 
